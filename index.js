@@ -8,7 +8,9 @@ const port = process.env.PORT || 3000;
 
 const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN);
 
-const apiKey = "YOUR_API_KEY";
+app.get("/", (req, res) => {
+  res.send("Connected");
+});
 
 // Middleware for API key authentication
 const authenticate = (req, res, next) => {
